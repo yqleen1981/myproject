@@ -9,8 +9,8 @@ public class StrategyThread extends Thread{
 	public Properties systemProperties;
 	public Object waitFlag = new Object();
 	
-	public void init(Connection strategyConn, Properties systemProperties){
-		this.strategyConn = strategyConn;
+	public void init(Properties systemProperties){
+//		this.strategyConn = strategyConn;
 		this.systemProperties = systemProperties;
 	}
 	

@@ -6,9 +6,9 @@ import java.sql.SQLException;
 
 public class ConnectionManager {
 	static org.apache.log4j.Logger log = org.apache.log4j.Logger.getLogger(ConnectionManager.class);
-	private Connection marketConn;
-	private Connection strategyConn;
-	private Connection InitConnetion(){
+	private static Connection marketConn;
+	private static Connection strategyConn;
+	private static Connection InitConnetion(){
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@192.168.111.150:1521:qhdb","qh","oracle");
@@ -22,19 +22,19 @@ public class ConnectionManager {
 			return null;
 		}
 	}
-	public Connection getMarketConn() {
+	public static Connection getMarketConn() {
 		if (marketConn != null){			
 			return marketConn;
 		} else {
-			marketConn = this.InitConnetion();
+			marketConn = InitConnetion();
 			return marketConn;
 		}
 	}
-	public Connection getStrategyConn() {
+	public static Connection getStrategyConn() {
 		if (strategyConn != null){			
 			return strategyConn;
 		} else {
-			strategyConn = this.InitConnetion();
+			strategyConn = InitConnetion();
 			return strategyConn;
 		}
 	}
