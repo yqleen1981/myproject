@@ -38,6 +38,10 @@ public class ConnectionManager {
 			return strategyConn;
 		}
 	}
+
+	public static void test(){
+
+	}
 	
 	
 	
