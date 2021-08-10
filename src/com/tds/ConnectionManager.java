@@ -42,8 +42,4 @@ public class ConnectionManager {
 	public static void test(){
 
 	}
-	
-	
-	
-	
 }
