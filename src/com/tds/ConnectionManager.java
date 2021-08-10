@@ -40,6 +40,6 @@ public class ConnectionManager {
 	}
 
 	public static void test(){
-
+		System.out.println("");
 	}
 }
