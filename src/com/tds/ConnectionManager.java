@@ -39,7 +39,8 @@ public class ConnectionManager {
 		}
 	}
 
-	public static void test(){
+	public static String test(){
 		System.out.println("");
+		return null;
 	}
 }
